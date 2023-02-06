@@ -7,9 +7,22 @@ def rows_and_columns_contain(lst, target):
     Returns: True if every row and every column of lst contains
       target, False otherwise
     """
+    count_row = 0
+    for row in lst:
+        if target in row:
+            count_row = count_row + 1
+    
+    count_col = 0
+    col_lst = []
+    for i in range(0, len(lst) - 1):
+        for row in lst:
+            col_lst.append(row[i])
+        if target in col_lst:
+            count_col = count_col + 1
+        col_lst = []
+    
+    return count_row == len(lst) and count_col == len(lst[0] - 1)
 
-    ### Replace pass with your code
-    pass
 
 
 #############################################################
