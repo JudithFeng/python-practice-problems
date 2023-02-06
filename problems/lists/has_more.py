@@ -1,3 +1,12 @@
+def count_target(lst, target):
+    count = 0
+    
+    for i in lst:
+        if i == target:
+            count = count + 1
+    return count
+
+
 def has_more(lst1, lst2, target):
     """
     Determine which list contains more of the target value
@@ -9,7 +18,7 @@ def has_more(lst1, lst2, target):
     """
 
     ### Replace pass with your code
-    pass
+    return count_target(lst1, target) > count_target(lst2, target)
 
 
 #############################################################
